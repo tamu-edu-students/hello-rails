@@ -1,13 +1,13 @@
 <tr id="<%= dom_id movie %>">
-<th class="<%= 'sorted ' + (session[:sort_column] == 'title' ? 'sorted-' + session[:sort_direction] : '') %>">
-  <%= link_to movie.title, movie %>
-  </th>
+  <td class="<%= 'sorted ' + (session[:sort_column] == 'title' ? 'sorted-' + session[:sort_direction] : '') %>">
+    <%= link_to movie.title, movie %>
+  </td>
 
-  <th class="<%= 'sorted ' + (session[:sort_column] == 'rating' ? 'sorted-' + session[:sort_direction] : '') %>">
+  <td class="<%= 'sorted ' + (session[:sort_column] == 'rating' ? 'sorted-' + session[:sort_direction] : '') %>">
     <%= movie.rating %>
-  </th>
+  </td>
 
-  <th class="<%= 'sorted ' + (session[:sort_column] == 'release_date' ? 'sorted-' + session[:sort_direction] : '') %>">
+  <td class="<%= 'sorted ' + (session[:sort_column] == 'release_date' ? 'sorted-' + session[:sort_direction] : '') %>">
     <%= movie.release_date %>
-  </th>
+  </td>
 </tr>

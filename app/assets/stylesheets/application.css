@@ -1,30 +1,157 @@
-.sorted {
+/* General Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .notice-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Highlight the currently sorted columns */
+  .sorted {
     font-weight: bold;
   }
   
   .sorted-asc {
-    background-color: lightgreen;
+    background-color: lightgreen; /* Green for ascending */
   }
   
   .sorted-desc {
-    background-color: lightcoral;
+    background-color: lightcoral; /* Red for descending */
   }
   
+  /* Optional: Style the sorting arrows */
   th a {
     text-decoration: none;
+    color: #333;
   }
   
   th a:after {
     content: ' ';
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 5px;
   }
   
   th.sorted-asc a:after {
     content: '↑';
+    color: green;
   }
   
   th.sorted-desc a:after {
     content: '↓';
+    color: red;
   }
   
+  /* New Movie Button */
+  .new-movie-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+  
+  .new-movie-btn:hover {
+    background-color: #0056b3;
+  }
+
+/* Action Links / Buttons */
+.action-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.action-links a, .action-links button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.back-to-movies-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.back-to-movies-btn:hover {
+  background-color: #0056b3;
+}
+
+.edit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #218838;
+}
+
+.show-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.show-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:focus {
+  outline: none;
+}
+
+.form-style {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
