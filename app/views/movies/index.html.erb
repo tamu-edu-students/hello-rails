@@ -7,16 +7,15 @@
 <table id="movies">
   <thead>
     <tr>
-      <th>
+      <th class="<%= 'sorted ' + (session[:sort_column] == 'title' ? 'sorted-' + session[:sort_direction] : '') %>">
         <%= link_to 'Title', movies_path(sort: 'title', direction: (params[:direction] == 'asc' ? 'desc' : 'asc')) %>
       </th>
-      <th>
+      <th class="<%= 'sorted ' + (session[:sort_column] == 'rating' ? 'sorted-' + session[:sort_direction] : '') %>">
         <%= link_to 'Rating', movies_path(sort: 'rating', direction: (params[:direction] == 'asc' ? 'desc' : 'asc')) %>
       </th>
-      <th>
+      <th class="<%= 'sorted ' + (session[:sort_column] == 'release_date' ? 'sorted-' + session[:sort_direction] : '') %>">
         <%= link_to 'Release Date', movies_path(sort: 'release_date', direction: (params[:direction] == 'asc' ? 'desc' : 'asc')) %>
       </th>
-      <th>Movie Links</th>
     </tr>
   </thead>
   <% @movies.each do |movie| %>
